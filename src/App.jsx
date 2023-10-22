@@ -4,9 +4,14 @@ import './App.css';
 
 function App() {
   return (
-      <Canvas>
-        <Experience />
-      </Canvas>
+    <Canvas
+      camera={{
+        fov: 70,
+        position: [2.3, 1.5, 2.3],
+      }}
+    >
+      <Experience />
+    </Canvas>
   );
 }
 
