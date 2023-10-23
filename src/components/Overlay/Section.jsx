@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 export const Section = (props) => {
   return (
     <section className={`h-screen flex flex-col justify-center p10 ${props.right ? 'items-end' : 'items-start'}`} style={{ opacity: props.opacity }}>
@@ -12,8 +10,3 @@ export const Section = (props) => {
   );
 };
 
-Section.propTypes = {
-  right: PropTypes.bool,
-  opacity: PropTypes.number.isRequired,
-  children: PropTypes.node.isRequired,
-};
