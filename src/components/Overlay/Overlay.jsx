@@ -2,6 +2,7 @@ import { Section } from './Section';
 import { Scroll, useScroll } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import { useState, useRef } from 'react';
+import { SectionCarousel } from './SectionCarousel';
 
 export const Overlay = () => {
   const [introSectionOpacity, setIntroSectionOpacity] = useState(1);
@@ -15,23 +16,16 @@ export const Overlay = () => {
     setContactSectionOpacity(scroll.range(2 / 3, 1 / 3));
   });
 
-  const targetRef = useRef(null);
-
-  const scrollToTarget = () => {
-    targetRef.current.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <Scroll html>
       <div className='w-screen'>
         <Section opacity={introSectionOpacity}>
           <h1 className='font-semibold font-serif text-2xl'>👋 Hi My name is Daniel.</h1>
           <p className='text-gray-500'>Welcome to my three dimensional portfolio</p>
-          <button onClick={scrollToTarget} className='animate-bounce mt-6'>
-            ↓
-          </button>
+          <p className='animate-bounce mt-6'>↓</p>
         </Section>
-        <Section right opacity={skillSectionOpacity} ref={targetRef}>
+        <SectionCarousel sections={['1', '2', '3', '4']} right opacity={skillSectionOpacity} />
+        {/* <Section right opacity={skillSectionOpacity}>
           <h1 className='font-semibold font-serif text-2xl'>Here are my skillsets:</h1>
           <p className='mt-3'>Frontend 🚀</p>
           <ul className='list-disc list-inside'>
@@ -54,7 +48,7 @@ export const Overlay = () => {
             <li>NoSQL</li>
           </ul>
           <p className='animate-bounce mt-6'>↓</p>
-        </Section>
+        </Section> */}
         <Section opacity={contactSectionOpacity}>
           <h1 className='font-semibold font-serif text-2xl'>Contact</h1>
         </Section>

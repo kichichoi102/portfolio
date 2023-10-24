@@ -4,9 +4,20 @@ export const Section = (props) => {
       <div className='w-1/2 flex items-center justify-center'>
         <div className='max-w-sm w-full'>
           <div className='bg-white rounded-lg px-8 py-12'>{props.children}</div>
+          <div className='flex items-center justify-center pt-2'>
+            {props.handlePrev ? (
+              <button className='px-4 py-2 border rounded mr-2' onClick={props.handlePrev}>
+                Previous
+              </button>
+            ) : null}
+            {props.handleNext ? (
+              <button className='px-4 py-2 border rounded mr-2' onClick={props.handleNext}>
+                Next
+              </button>
+            ) : null}
+          </div>
         </div>
       </div>
     </section>
   );
 };
-

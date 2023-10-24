@@ -10,5 +10,6 @@ module.exports = {
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     'react/no-unknown-property': ['off', { ignore: ['class'] }],
     'react/prop-types': 0,
+    'react/display-name': 0,
   },
 };

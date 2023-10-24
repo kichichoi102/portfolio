@@ -55,7 +55,7 @@ export const Office = (props) => {
       1
     );
 
-    // library floor
+    // library movement
     timeline.current.from(
       libraryRef.current.position,
       {
@@ -64,6 +64,7 @@ export const Office = (props) => {
       },
       0.5
     );
+    // library rotation
     timeline.current.from(
       libraryRef.current.rotation,
       {
