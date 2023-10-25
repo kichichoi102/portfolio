@@ -6,13 +6,13 @@ export const Section = (props) => {
           <div className='bg-white rounded-lg px-8 py-12'>{props.children}</div>
           <div className='flex items-center justify-center pt-2'>
             {props.handlePrev ? (
-              <button className='px-4 py-2 border rounded mr-2' onClick={props.handlePrev}>
-                Previous
+              <button className='px-4 py-2 border rounded mr-2 animate-bounce mt-6' onClick={props.handlePrev}>
+                ←
               </button>
             ) : null}
             {props.handleNext ? (
-              <button className='px-4 py-2 border rounded mr-2' onClick={props.handleNext}>
-                Next
+              <button className='px-4 py-2 border rounded mr-2 animate-bounce mt-6' onClick={props.handleNext}>
+                →
               </button>
             ) : null}
           </div>

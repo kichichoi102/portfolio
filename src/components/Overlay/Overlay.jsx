@@ -1,13 +1,15 @@
 import { Section } from './Section';
 import { Scroll, useScroll } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { SectionCarousel } from './SectionCarousel';
+import { Bubble } from './Bubble';
 
 export const Overlay = () => {
   const [introSectionOpacity, setIntroSectionOpacity] = useState(1);
   const [skillSectionOpacity, setSkillSectionOpacity] = useState(1);
   const [contactSectionOpacity, setContactSectionOpacity] = useState(1);
+
   const scroll = useScroll();
 
   useFrame(() => {
@@ -15,6 +17,25 @@ export const Overlay = () => {
     setSkillSectionOpacity(scroll.curve(1 / 3, 1 / 3));
     setContactSectionOpacity(scroll.range(2 / 3, 1 / 3));
   });
+
+  const skillSections = [
+    {
+      content: (
+        <>
+          <h1 className='font-semibold font-serif text-2xl'>Project 1</h1>
+          <Bubble text='React' />
+        </>
+      ),
+    },
+    {
+      content: (
+        <>
+          <h1 className='font-semibold font-serif text-2xl'>Project 2</h1>
+          <Bubble text='Vue' />
+        </>
+      ),
+    },
+  ];
 
   return (
     <Scroll html>
@@ -24,7 +45,7 @@ export const Overlay = () => {
           <p className='text-gray-500'>Welcome to my three dimensional portfolio</p>
           <p className='animate-bounce mt-6'>↓</p>
         </Section>
-        <SectionCarousel sections={['1', '2', '3', '4']} right opacity={skillSectionOpacity} />
+        <SectionCarousel sections={skillSections} right opacity={skillSectionOpacity} />
         {/* <Section right opacity={skillSectionOpacity}>
           <h1 className='font-semibold font-serif text-2xl'>Here are my skillsets:</h1>
           <p className='mt-3'>Frontend 🚀</p>
