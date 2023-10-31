@@ -4,6 +4,8 @@ import { useFrame } from '@react-three/fiber';
 import { useState } from 'react';
 import { SectionCarousel } from './SectionCarousel';
 import { Bubble } from './Bubble';
+import { GithubButton } from './GithubButton';
+import { TryButton } from './TryButton';
 
 export const Overlay = () => {
   const [introSectionOpacity, setIntroSectionOpacity] = useState(1);
@@ -18,12 +20,32 @@ export const Overlay = () => {
     setContactSectionOpacity(scroll.range(2 / 3, 1 / 3));
   });
 
-  const skillSections = [
+  const skillSection = [
     {
       content: (
         <>
-          <h1 className='font-semibold font-serif text-2xl'>Project 1</h1>
-          <Bubble text='React' />
+          <h1 className='font-semibold font-serif text-2xl'>SlüchAI</h1>
+          <img src={'images/sluchai.png'} alt='sluchai' className="py-2"/>
+          <div className='space-x-2 space-y-1 py-3'>
+            <Bubble type='framework' text='React.js' />
+            <Bubble type='language' text='Javascript' />
+            <Bubble type='library' text='ml5.js' />
+            <Bubble type='tool' text='GCP' />
+          </div>
+          <p className='text-gray-500 space-y-2'>
+            SlüchAI is a neural network trained to identify users&apos; slouching postures. After a prolonged period of slouching, it alerts the user about their sitting posture to avoid risk of back
+            and neck pain.
+          </p>
+          <br />
+          <p>2022 Winner of ToHacks best use of Google Cloud!</p>
+          <div className="grid grid-cols-3 gap-1 py-3">
+            <div class="col-span-1">
+              <GithubButton url="https://github.com/kichichoi102/pose-classification"/>
+            </div>
+            <div class="col-span-2">
+              <TryButton url="https://devpost.com/software/slouchanalytics"/>
+            </div>
+          </div>
         </>
       ),
     },
@@ -43,9 +65,10 @@ export const Overlay = () => {
         <Section opacity={introSectionOpacity}>
           <h1 className='font-semibold font-serif text-2xl'>👋 Hi My name is Daniel.</h1>
           <p className='text-gray-500'>Welcome to my three dimensional portfolio</p>
-          <p className='animate-bounce mt-6'>↓</p>
+          <br />
+          <p className='text-gray-500 animate-bounce mt-2p'>↓ Scroll down to see more.</p>
         </Section>
-        <SectionCarousel sections={skillSections} right opacity={skillSectionOpacity} />
+        <SectionCarousel sections={skillSection} right opacity={skillSectionOpacity} />
         {/* <Section right opacity={skillSectionOpacity}>
           <h1 className='font-semibold font-serif text-2xl'>Here are my skillsets:</h1>
           <p className='mt-3'>Frontend 🚀</p>

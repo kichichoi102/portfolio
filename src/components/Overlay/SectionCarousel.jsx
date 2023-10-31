@@ -18,7 +18,7 @@ export const SectionCarousel = ({ sections }, props) => {
 
   return (
     <>
-      <Section right opacity={props.opacity} handlePrev={handlePrev} handleNext={handleNext}>
+      <Section right carousel opacity={props.opacity} handlePrev={handlePrev} handleNext={handleNext}>
         {sections[activeSection].content}
       </Section>
     </>
