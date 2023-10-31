@@ -7,7 +7,7 @@ export const Chapter = (props) => {
   return (
     <div className='flex spacing-x'>
       <button
-        className='w-1/2 bg-white rounded-t-lg py-2 border border-black ml-1'
+        className='w-1/2 bg-white rounded-t-lg py-2 border border-black ml-1 animate-pulse'
         onClick={() => {
           props.handleChapterClick(ChapterEnum.PROJECTS);
         }}

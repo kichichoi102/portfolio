@@ -64,8 +64,8 @@ export const Overlay = () => {
               <Bubble type='tool' text='GSAP' />
             </div>
             <p className='text-gray-500 space-y-2'>
-              My Three Dimensional portfolio to showcase my projects and experiences! I wanted to create a unique portfolio that would stand out from the rest. I also wanted to learn Three.js and
-              how I could implement it in React!
+              My Three Dimensional portfolio to showcase my projects and experiences! I wanted to create a unique portfolio that would stand out from the rest. I also wanted to learn Three.js and how
+              I could implement it in React!
             </p>
             <br />
             <p>You&apos;re Currently here!</p>
@@ -103,7 +103,11 @@ export const Overlay = () => {
     <Scroll html>
       <div className='w-screen'>
         <Section opacity={introSectionOpacity}>
-          <h1 className='font-semibold font-serif text-2xl'>👋 Hi My name is Daniel.</h1>
+          <div className='flex spacing-x'>
+            <h1 className='font-semibold font-serif text-2xl animate-waving-hand'>👋 </h1>
+            <h1 className='font-semibold font-serif text-2xl'> Hi My name is Daniel.</h1>
+          </div>
+
           <p className='text-gray-500'>Welcome to my three dimensional portfolio</p>
           <br />
           <p className='text-gray-500 animate-bounce mt-2p'>↓ Scroll down to see more.</p>
