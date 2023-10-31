@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Section } from './Section';
 import { ChapterEnum } from './Chapter';
 
-export const SectionCarousel = ({ sections }, props) => {
+export const SectionCarousel = ({ sections, opacity }) => {
   const [selectedChapter, setSelectedChapter] = useState(ChapterEnum.PROJECTS);
   const [activeProjectSection, setActiveProjectSection] = useState(0);
   const [activeExperienceSection, setActiveExperienceSection] = useState(0);
@@ -37,7 +37,7 @@ export const SectionCarousel = ({ sections }, props) => {
 
   return (
     <>
-      <Section right carousel handleChapterClick={handleChapterClick} opacity={props.opacity} handlePrev={handlePrev} handleNext={handleNext} selectedChapter={selectedChapter}>
+      <Section right carousel handleChapterClick={handleChapterClick} opacity={opacity} handlePrev={handlePrev} handleNext={handleNext} selectedChapter={selectedChapter}>
         {selectedChapter === ChapterEnum.PROJECTS ? sections[selectedChapter][activeProjectSection].content : sections[selectedChapter][activeExperienceSection].content}
       </Section>
     </>
