@@ -2,7 +2,7 @@ import { Chapter } from "./Chapter";
 
 export const Section = (props) => {
   return (
-    <section className={`flex flex-col justify-center p10 ${props.carousel ? 'h-fit' : 'h-screen'} ${props.right ? 'items-end' : 'items-start'}`} style={{ opacity: props.opacity }}>
+    <section className={`h-screen flex flex-col justify-center p10 ${props.carousel ? 'h-fit' : 'h-screen'} ${props.right ? 'items-end' : 'items-start'}`} style={{ opacity: props.opacity }}>
       <div className='w-1/2 flex items-center justify-center'>
         <div className='max-w-sm w-full'>
           {props.carousel && <Chapter />}
