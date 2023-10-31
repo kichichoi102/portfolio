@@ -37,7 +37,7 @@ export const SectionCarousel = ({ sections }, props) => {
 
   return (
     <>
-      <Section right carousel handleChapterClick={handleChapterClick} opacity={props.opacity} handlePrev={handlePrev} handleNext={handleNext}>
+      <Section right carousel handleChapterClick={handleChapterClick} opacity={props.opacity} handlePrev={handlePrev} handleNext={handleNext} selectedChapter={selectedChapter}>
         {selectedChapter === ChapterEnum.PROJECTS ? sections[selectedChapter][activeProjectSection].content : sections[selectedChapter][activeExperienceSection].content}
       </Section>
     </>
