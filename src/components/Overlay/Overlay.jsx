@@ -116,7 +116,7 @@ export const Overlay = () => {
       {
         content: (
           <>
-            <h1 className='font-semibold font-serif text-2xl'>More to come...</h1>
+            <h1 className='font-semibold font-serif text-2xl'>More things on the way...</h1>
             <img
               src={'https://media3.giphy.com/media/eW9qyRjOwDROHF5YuQ/giphy.gif?cid=ecf05e47zsw30nckfyk19a604nmc34hwlzq12ti8v9ond0lq&ep=v1_gifs_search&rid=giphy.gif&ct=g'}
               alt='penguin knitting'
@@ -152,7 +152,7 @@ export const Overlay = () => {
         content: (
           <>
             <h1 className='font-semibold font-serif text-2xl'>Full Stack Engineer - Nitrex Metal Inc.</h1>
-            <h2 className='font-medium font-serif text-l'>March 2023 - November 2023</h2>
+            <h2 className='font-medium font-serif text-l'>March 2023 - November 2023 (9 Months)</h2>
             <img src={'images/nitrex.jpg'} alt='nitrex logo' className='py-2 object-contain h-60 w-96' />
             <div className='space-x-1 space-y-1 py-3'>
               <Bubble type='framework' text='FastAPI' />
@@ -195,8 +195,8 @@ export const Overlay = () => {
       {
         content: (
           <>
-            <h1 className='font-semibold font-serif text-2xl'>Lead Engineer - Combat Training Center.</h1>
-            <h2 className='font-medium font-serif text-l'>Janurary 2022 - March 2023</h2>
+            <h1 className='font-semibold font-serif text-2xl'>Lead Engineer - Combat Training Center</h1>
+            <h2 className='font-medium font-serif text-l'>Janurary 2022 - March 2023 (14 Months)</h2>
             <img src={'images/ctc.jpg'} alt='ctc logo' className='py-2 object-contain h-60 w-96' />
             <div className='space-x-1 space-y-1 py-3'>
               <Bubble type='framework' text='Quasar/Vue.js' />
@@ -229,8 +229,8 @@ export const Overlay = () => {
       {
         content: (
           <>
-            <h1 className='font-semibold font-serif text-2xl'>Backend Engineer - Canadian Joint Operations Command.</h1>
-            <h2 className='font-medium font-serif text-l'>May 2021 - Janurary 2022</h2>
+            <h1 className='font-semibold font-serif text-2xl'>Backend Engineer - Canadian Joint Operations Command</h1>
+            <h2 className='font-medium font-serif text-l'>May 2021 - Janurary 2022 (6 Months)</h2>
             <img src={'images/CJOC.png'} alt='cjoc logo' className='py-2 object-contain h-60 w-96' />
             <div className='space-x-1 space-y-1 py-3'>
               <Bubble type='framework' text='React.js' />
@@ -263,12 +263,13 @@ export const Overlay = () => {
       {
         content: (
           <>
-            <h1 className='font-semibold font-serif text-2xl'>Software Engineer - Canadian Forces Network Operations Command.</h1>
-            <h2 className='font-medium font-serif text-l'>Janurary 2021 - May 2021</h2>
+            <h1 className='font-semibold font-serif text-2xl'>Software Engineer - Canadian Forces Network Operations Command</h1>
+            <h2 className='font-medium font-serif text-l'>Janurary 2021 - May 2021 (5 Months)</h2>
             <img src={'images/cfnoc.jpg'} alt='cfnoc logo' className='py-2 object-contain h-60 w-96' />
             <div className='space-x-1 space-y-1 py-3'>
               <Bubble type='framework' text='React.js' />
               <Bubble type='framework' text='FastAPI' />
+              <Bubble type='language' text='Javascript' />
               <Bubble type='language' text='Python3' />
               <Bubble type='library' text='D3.js' />
               <Bubble type='library' text='Chart.js' />
@@ -283,7 +284,39 @@ export const Overlay = () => {
                   Designed and implemented a Mail-Bomb Architecture using AWS CloudFormation, which virtually created components to launch AWS ec2 instances safely and effectively without leaving any
                   traces.
                 </li>
-                <li>Developed a linear-regression model that optimized the upload bach sizes for any host machines based on its caching performance.</li>
+                <li>Developed a linear-regression model that optimized the upload batch sizes for any host machines based on its caching performance.</li>
+              </ul>
+            </div>
+          </>
+        ),
+      },
+      {
+        content: (
+          <>
+            <h1 className='font-semibold font-serif text-2xl'>Software Engineer Intern - CityNCom</h1>
+            <h2 className='font-medium font-serif text-l'>May 2018 - September 2018 (5 Months)</h2>
+            <img src={'images/cityncom.png'} alt='cfnoc logo' className='py-2 object-contain h-60 w-96' />
+            <div className='space-x-1 space-y-1 py-3'>
+              <Bubble type='framework' text='.NET' />
+              <Bubble type='language' text='C#' />
+              <Bubble type='language' text='C++' />
+              <Bubble type='language' text='Javascript' />
+              <Bubble type='library' text='Chart.js' />
+              <Bubble type='database' text='PostgreSQL' />
+              <Bubble type='database' text='MariaDB' />
+              <Bubble type='tool' text='OpenStack' />
+              <Bubble type='tool' text='Jenkins/Puppet' />
+              <Bubble type='tool' text='CentOS' />
+              <Bubble type='other' text='Firmware Development' />
+            </div>
+            <div className='px-6 text-black-500 space-y-2'>
+              <ul className='list-disc'>
+                <li>
+                  Assisted in creating tools to monitor applications and services in cloud instances including system health indicators, trend identification, and anomaly detection on the OpenStack
+                  Platform.
+                </li>
+                <li>Pursued hands-on experience in implementing a DevOps pipeline using Jenkins and Puppet.</li>
+                <li>Removed redundant sub-processes and implemented automation design, resulting in a 30% decrease in operational costs.</li>
               </ul>
             </div>
           </>
@@ -295,7 +328,7 @@ export const Overlay = () => {
   return (
     <Scroll html>
       <div className='w-screen'>
-        <Section opacity={introSectionOpacity} scrollText="↓ Scroll down to see what I was up to...">
+        <Section opacity={introSectionOpacity} scrollText='↓ Scroll down to see what I was up to...'>
           <div className='flex spacing-x'>
             <h1 className='font-semibold font-serif text-2xl animate-waving-hand'>👋 </h1>
             <h1 className='font-semibold font-serif text-2xl'> Hi My name is Daniel.</h1>
