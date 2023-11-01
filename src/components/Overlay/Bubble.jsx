@@ -4,12 +4,12 @@ const typeStyleMap = {
   library: 'bg-yellow-400 border border-yellow-700 font-medium text-white',
   database: 'bg-red-400 border border-red-700 font-medium text-white',
   tool: 'bg-purple-400 border border-purple-700 font-medium text-white',
-  other: 'bg-gray-100 border border-gray-700 font-medium text-black',
+  other: 'bg-gray-100 border border-gray-700 font-medium text-black-100',
 };
 
 export const Bubble = ({ type, text }) => {
   return (
-    <div className={`inline-block rounded-full py-auto px-2 text-white ${type ? typeStyleMap[type] : typeStyleMap['other']}`}>
+    <div className={`inline-block rounded-full py-auto px-2 ${type ? typeStyleMap[type] : typeStyleMap['other']}`}>
       <p>{text}</p>
     </div>
   );
