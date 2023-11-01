@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Section } from './Section';
 import { ChapterEnum } from './Chapter';
 import { useEffect } from 'react';
+import { SectionCarouselItem } from './SectionCarouselItem';
 
 export const SectionCarousel = ({ sections, opacity }) => {
   const [selectedChapter, setSelectedChapter] = useState(ChapterEnum.EXPERIENCE);
@@ -10,6 +11,8 @@ export const SectionCarousel = ({ sections, opacity }) => {
   const [scrollText, setScrollText] = useState('');
 
   useEffect(() => {
+    console.log(selectedChapter);
+
     if (selectedChapter === ChapterEnum.PROJECTS) {
       if (activeProjectSection == sections[selectedChapter].length - 1) {
         setScrollText('↓ Scroll down to reach out... Or take a look at my past Experiences!');
@@ -56,7 +59,25 @@ export const SectionCarousel = ({ sections, opacity }) => {
   return (
     <>
       <Section right carousel handleChapterClick={handleChapterClick} opacity={opacity} handlePrev={handlePrev} handleNext={handleNext} selectedChapter={selectedChapter} scrollText={scrollText}>
-        {selectedChapter === ChapterEnum.PROJECTS ? sections[selectedChapter][activeProjectSection].content : sections[selectedChapter][activeExperienceSection].content}
+        {selectedChapter === ChapterEnum.PROJECTS ? (
+          <SectionCarouselItem
+            title={sections[selectedChapter][activeProjectSection].title}
+            imageSrc={sections[selectedChapter][activeProjectSection].imageSrc}
+            bubbles={sections[selectedChapter][activeProjectSection].bubbles}
+            description={sections[selectedChapter][activeProjectSection].description}
+            award={sections[selectedChapter][activeProjectSection].award}
+            githubUrl={sections[selectedChapter][activeProjectSection].githubUrl}
+            tryUrl={sections[selectedChapter][activeProjectSection].tryUrl}
+          />
+        ) : (
+          <SectionCarouselItem
+            title={sections[selectedChapter][activeExperienceSection].title}
+            header={sections[selectedChapter][activeExperienceSection].header}
+            imageSrc={sections[selectedChapter][activeExperienceSection].imageSrc}
+            bubbles={sections[selectedChapter][activeExperienceSection].bubbles}
+            summaries={sections[selectedChapter][activeExperienceSection].summaries}
+          />
+        )}
       </Section>
     </>
   );
