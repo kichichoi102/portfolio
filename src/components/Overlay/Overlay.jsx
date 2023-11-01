@@ -328,7 +328,7 @@ export const Overlay = () => {
   return (
     <Scroll html>
       <div className='w-screen'>
-        <Section opacity={introSectionOpacity} scrollText='↓ Scroll down to see what I was up to...'>
+        <Section opacity={introSectionOpacity} scrollText='↓ Scroll down to see what I&apos;m up to...'>
           <div className='flex spacing-x'>
             <h1 className='font-semibold font-serif text-2xl animate-waving-hand'>👋 </h1>
             <h1 className='font-semibold font-serif text-2xl'> Hi My name is Daniel.</h1>

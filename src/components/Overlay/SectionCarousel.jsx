@@ -12,13 +12,13 @@ export const SectionCarousel = ({ sections, opacity }) => {
   useEffect(() => {
     if (selectedChapter === ChapterEnum.PROJECTS) {
       if (activeProjectSection == sections[selectedChapter].length - 1) {
-        setScrollText('↓ Scroll down to see more... Or take a look at my past Experiences!');
+        setScrollText('↓ Scroll down to reach out... Or take a look at my past Experiences!');
       } else {
         setScrollText('');
       }
     } else {
       if (activeExperienceSection == sections[selectedChapter].length - 1) {
-        setScrollText('↓ Scroll down to see more.... Or take a look at my side Projects!');
+        setScrollText('↓ Scroll down to reach out.... Or take a look at my side Projects!');
       } else {
         setScrollText('');
       }
