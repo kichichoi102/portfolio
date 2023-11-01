@@ -18,7 +18,7 @@ export const SectionCarousel = ({ sections, opacity }) => {
       }
     } else {
       if (activeExperienceSection == sections[selectedChapter].length - 1) {
-        setScrollText('↓ Scroll down to see more.... Or take a look at my Projects!...');
+        setScrollText('↓ Scroll down to see more.... Or take a look at my Projects!');
       } else {
         setScrollText('');
       }
