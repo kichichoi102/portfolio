@@ -152,7 +152,7 @@ export const sectionData = {
       ],
     },
     {
-      title: 'Software Engineer - Canadian Forces Network Operations Command',
+      title: 'Software Engineer - Canadian Forces Network Operations Centre',
       header: 'Janurary 2021 - May 2021 (5 Months)',
       imageSrc: 'images/cfnoc.jpg',
       bubbles: [

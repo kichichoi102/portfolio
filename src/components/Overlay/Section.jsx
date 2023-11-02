@@ -4,7 +4,7 @@ export const Section = (props) => {
   return (
     <section className={`h-screen flex flex-col justify-center p10 ${props.right ? 'items-end' : 'items-start'}`} style={{ opacity: props.opacity }}>
       <div className='w-1/2 flex items-center justify-center'>
-        <div className='max-w-md w-full'>
+        <div className='max-w-lg w-full'>
           {props.carousel && <Chapter handleChapterClick={props.handleChapterClick} selectedChapter={props.selectedChapter} />}
           {/* rounded-lg if not carousel, else rounded-b-lg */}
           <div className={`bg-white ${props.carousel ? 'rounded-b-lg border border-black border-t-transparent' : 'rounded-lg border border-slate-400'} px-8 py-12`}>

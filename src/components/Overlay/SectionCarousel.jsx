@@ -11,8 +11,6 @@ export const SectionCarousel = ({ sections, opacity }) => {
   const [scrollText, setScrollText] = useState('');
 
   useEffect(() => {
-    console.log(selectedChapter);
-
     if (selectedChapter === ChapterEnum.PROJECTS) {
       if (activeProjectSection == sections[selectedChapter].length - 1) {
         setScrollText('↓ Scroll down to reach out... Or take a look at my past Experiences!');
