@@ -197,3 +197,12 @@ export const sectionData = {
     },
   ],
 };
+
+export const ProgressBarText = {
+  0: 'Looking for snacks...',
+  20: 'Searching for the meaning of life...',
+  40: 'Looking for mice...',
+  60: 'Fixing last minute bugs...',
+  80: 'Taking a well deserved break...',
+  100: 'Almost there...',
+};

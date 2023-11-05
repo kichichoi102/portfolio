@@ -18,11 +18,20 @@ export default {
           '60%': { transform: 'rotate(0.0deg)' },
           '100%': { transform: 'rotate(0.0deg)' },
         },
+        gradient: {
+          to: {
+            'background-position': '200% center',
+          }
+        }
       },
       animation: {
         'waving-hand': 'wave 2s linear infinite',
+        'gradient': 'gradient 8s linear infinite',
       },
     },
   },
   plugins: [],
+  corePlugins: {
+    container: false, // Disable the container plugin
+  },
 };

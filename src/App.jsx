@@ -2,10 +2,10 @@ import { Canvas } from '@react-three/fiber';
 import { useEffect, useState } from 'react';
 import { Experience } from './components/Experience';
 import { Footer } from './components/Footer';
-import { LoadingScreen } from './LoadingScreen';
+import { LoadingScreen } from './components/LoadingScreen';
 import './App.css';
 
-const maxLoadTime = 5000;
+const maxLoadTime = 15000; // 15 seconds
 
 function App() {
   const [loading, setLoading] = useState(true);
