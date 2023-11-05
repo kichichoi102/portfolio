@@ -8,22 +8,27 @@ export const SectionCarousel = ({ sections, opacity }) => {
   const [selectedChapter, setSelectedChapter] = useState(ChapterEnum.EXPERIENCE);
   const [activeProjectSection, setActiveProjectSection] = useState(0);
   const [activeExperienceSection, setActiveExperienceSection] = useState(0);
+  const [pageNumber, setPageNumber] = useState(0);
+  const [maxPageNumber, setMaxPageNumber] = useState(sections[selectedChapter].length);
   const [scrollText, setScrollText] = useState('');
 
   useEffect(() => {
     if (selectedChapter === ChapterEnum.PROJECTS) {
+      setPageNumber(activeProjectSection + 1);
       if (activeProjectSection == sections[selectedChapter].length - 1) {
         setScrollText('↓ Scroll down to reach out... Or take a look at my past Experiences!');
       } else {
         setScrollText('');
       }
     } else {
+      setPageNumber(activeExperienceSection + 1);
       if (activeExperienceSection == sections[selectedChapter].length - 1) {
         setScrollText('↓ Scroll down to reach out.... Or take a look at my side Projects!');
       } else {
         setScrollText('');
       }
     }
+    setMaxPageNumber(sections[selectedChapter].length);
   }, [activeProjectSection, activeExperienceSection, selectedChapter]);
 
   const handleChapterClick = (chapter) => {
@@ -40,6 +45,7 @@ export const SectionCarousel = ({ sections, opacity }) => {
         setActiveExperienceSection(activeExperienceSection + 1);
       }
     }
+    setMaxPageNumber(sections[selectedChapter].length);
   };
 
   const handlePrev = () => {
@@ -56,7 +62,18 @@ export const SectionCarousel = ({ sections, opacity }) => {
 
   return (
     <>
-      <Section right carousel handleChapterClick={handleChapterClick} opacity={opacity} handlePrev={handlePrev} handleNext={handleNext} selectedChapter={selectedChapter} scrollText={scrollText}>
+      <Section
+        right
+        carousel
+        handleChapterClick={handleChapterClick}
+        opacity={opacity}
+        handlePrev={handlePrev}
+        handleNext={handleNext}
+        selectedChapter={selectedChapter}
+        scrollText={scrollText}
+        pageNumber={pageNumber}
+        maxPageNumber={maxPageNumber}
+      >
         {selectedChapter === ChapterEnum.PROJECTS ? (
           <SectionCarouselItem
             title={sections[selectedChapter][activeProjectSection].title}

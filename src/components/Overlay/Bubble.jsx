@@ -7,10 +7,11 @@ const typeStyleMap = {
   other: 'bg-gray-100 border border-gray-700 font-medium text-black-100',
 };
 
-export const Bubble = ({ type, text }) => {
+export const Bubble = ({ type, text, toggleExpand }) => {
+  const handleExpand = toggleExpand ? toggleExpand : null;
   return (
-    <div className={`inline-block rounded-full py-auto px-2 ${type ? typeStyleMap[type] : typeStyleMap['other']}`}>
-      <p>{text}</p>
+    <div className={`inline-block rounded-full py-auto px-2 ${type ? typeStyleMap[type] : typeStyleMap['other']}`} onClick={handleExpand}>
+      <p onClick={handleExpand}>{text}</p>
     </div>
   );
 };

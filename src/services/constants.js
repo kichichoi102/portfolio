@@ -96,7 +96,7 @@ export const sectionData = {
         { type: 'other', text: 'SSO' },
       ],
       summaries: [
-        'Designed and implemented Single Sign-On layer for a portfolio of five web applications portals, improving user registration and sign-in experience and overall authentication/security.',
+        'Designed and implemented Single Sign-On service for a portfolio of five web applications portals, improving user registration and sign-in experience and overall authentication/security.',
         'Optimized API performance by introducing LRU Cache, writing asynchronous processes for database calls, and refactoring SQL queries with CTEs and removing redundant joints, reducing the core API response times by 34%.',
         'Developed an internal library in Python that synchronized multiple user directories into a centralized directory on Keycloak and an interface that performs automatic user provisioning and de-provisioning.',
       ],
