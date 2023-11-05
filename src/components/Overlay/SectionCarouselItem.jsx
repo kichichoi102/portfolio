@@ -28,7 +28,7 @@ export const SectionCarouselItem = ({ title, header, imageSrc, bubbles, descript
       </div>
       {bubbles.length > MAX_NUMBER_OF_BUBBLES && (
         <button onClick={toggleExpand} className='text-blue-500 cursor-pointer pb-4 underline underline-offset-2'>
-          {isExpanded ? 'Show Less' : 'Show More'}
+          {isExpanded ? 'Hide' : 'Show More'}
         </button>
       )}
       {description && <p className='text-gray-500 space-y-2'>{description}</p>}

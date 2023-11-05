@@ -21,8 +21,8 @@ export const Section = ({ right, opacity, carousel, handleChapterClick, handlePr
                 {handlePrev && (
                   <button
                     className={`px-4 border rounded mr-1 border ${
-                      pageNumber === 1 ? 'disabled:opacity-25 cursor-not-allowed border-black-100' : 'hover:animate-pulse border-slate-400'
-                    } bg-white font-bold`}
+                      pageNumber === 1 ? 'disabled:opacity-25 cursor-not-allowed border-black-100 text-slate-700' : 'hover:animate-pulse border-slate-400 text-black'
+                    } bg-white`}
                     onClick={handlePrev}
                   >
                     ←
@@ -31,8 +31,8 @@ export const Section = ({ right, opacity, carousel, handleChapterClick, handlePr
                 {handlePrev && (
                   <button
                     className={`px-4 border rounded mr-1 border ${
-                      pageNumber === maxPageNumber ? 'disabled:opacity-25 cursor-not-allowed border-black-100' : 'hover:animate-pulse border-slate-400'
-                    } bg-white font-bold`}
+                      pageNumber === maxPageNumber ? 'disabled:opacity-25 cursor-not-allowed border-black-100 text-slate-700' : 'hover:animate-pulse border-slate-400 text-black'
+                    } bg-white`}
                     onClick={handleNext}
                   >
                     →
@@ -41,7 +41,7 @@ export const Section = ({ right, opacity, carousel, handleChapterClick, handlePr
               </div>
               {pageNumber && (
                 <div className='col-span-2 flex justify-self-end'>
-                  <div className='px-4 py-2 border rounded border border-slate-500 mr-2 bg-white font-bold'>
+                  <div className='px-4 py-2 border rounded border border-slate-400 mr-2 bg-white font-bold'>
                     {pageNumber}/{maxPageNumber}
                   </div>
                 </div>
