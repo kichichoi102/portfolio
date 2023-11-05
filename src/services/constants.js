@@ -14,7 +14,7 @@ export const sectionData = {
         { type: 'database', text: 'MongoDB' },
       ],
       description:
-        'SlüchAI is a neural network trained to identify users&apos; slouching postures. After a prolonged period of slouching, it alerts the user about their sitting posture to avoid risk of back and neck pain.',
+        "SlüchAI is a neural network trained to identify users' slouching postures. After a prolonged period of slouching, it alerts the user about their sitting posture to avoid risk of back and neck pain.",
       award: '2022 Winner of ToHacks best use of Google Cloud!',
       githubUrl: 'https://github.com/kichichoi102/pose-classification',
       tryUrl: 'https://devpost.com/software/slouchanalytics',
