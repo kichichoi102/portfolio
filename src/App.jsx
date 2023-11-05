@@ -34,21 +34,15 @@ function App() {
 
   return (
     <>
-      {loading ? (
-        <LoadingScreen progress={progress} />
-      ) : (
-        <>
-          <Canvas
-            camera={{
-              fov: 70,
-              position: [2.3, 1.5, 2.3],
-            }}
-          >
-            {loading ? <Hello progress={progress} /> : <Experience />}
-          </Canvas>
-          <Footer />
-        </>
-      )}
+      <Canvas
+        camera={{
+          fov: 70,
+          position: [2.3, 1.5, 2.3],
+        }}
+      >
+        {loading ? <LoadingScreen progress={progress} /> : <Experience />}
+      </Canvas>
+      <Footer />
     </>
   );
 }
