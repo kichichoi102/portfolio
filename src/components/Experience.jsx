@@ -20,7 +20,7 @@ export const Experience = () => {
       <OrbitControls enableZoom={false} enableRotate={false} />
       <ScrollControls pages={3} damping={0.25}>
         <ExperienceContext.Provider value={{ timeline, libraryRef, atticRef }}>
-          <Overlay />
+          <Overlay style={{backgroundColor: 'red'}}/>
           <Office />
         </ExperienceContext.Provider>
       </ScrollControls>

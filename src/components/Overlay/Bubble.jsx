@@ -8,7 +8,7 @@ const typeStyleMap = {
 };
 
 export const Bubble = ({ type, text, toggleExpand }) => {
-  const handleExpand = toggleExpand ? toggleExpand : null;
+  const handleExpand = toggleExpand ? () => toggleExpand() : null;
   return (
     <div className={`inline-block rounded-full py-auto px-2 ${type ? typeStyleMap[type] : typeStyleMap['other']}`} onClick={handleExpand}>
       <p onClick={handleExpand}>{text}</p>

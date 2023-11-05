@@ -5,11 +5,15 @@ import { Footer } from './components/Footer';
 import { LoadingScreen } from './components/LoadingScreen';
 import './App.css';
 
-const maxLoadTime = 50; // 15 seconds
+const loadingScreen = true;
+const maxLoadTime = 10000; // 10 seconds
 
 function App() {
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
+  const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  const appStyle = isDarkMode ? 'bg-[linear-gradient(0deg,#0f2027,#203a43,#2c5364)]' : 'bg-[linear-gradient(0deg,#d9afd9_0%,#97d9e1_100%)]';
 
   useEffect(() => {
     if (loading) {
@@ -33,17 +37,17 @@ function App() {
   }, [loading]);
 
   return (
-    <>
+    <div style={{ height: '100%' }} className={appStyle}>
       <Canvas
         camera={{
           fov: 70,
           position: [2.3, 1.5, 2.3],
         }}
       >
-        {loading ? <LoadingScreen progress={progress} /> : <Experience />}
+        {loadingScreen && loading ? <LoadingScreen progress={progress} /> : <Experience />}
       </Canvas>
       <Footer />
-    </>
+    </div>
   );
 }
 

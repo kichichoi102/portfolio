@@ -16,8 +16,8 @@ export const SectionCarouselItem = ({ title, header, imageSrc, bubbles, descript
 
   return (
     <>
-      <h1 className='font-semibold font-serif text-2xl'>{title}</h1>
-      {header && <h2 className='font-medium font-serif text-l'>{header}</h2>}
+      <h1 className='font-semibold font-serif text-2xl dark:text-white'>{title}</h1>
+      {header && <h2 className='font-medium font-serif text-l dark:text-slate-400'>{header}</h2>}
       <div className='flex justify-center items-center'>
         <img src={imageSrc} alt={title} className='flex justify-center items-center py-2 object-contain h-60 w-96' />
       </div>
@@ -33,7 +33,7 @@ export const SectionCarouselItem = ({ title, header, imageSrc, bubbles, descript
       )}
       {description && <p className='text-gray-500 space-y-2'>{description}</p>}
       {summaries && summaries.length > 0 && (
-        <div className='px-6 text-black-500 space-y-2'>
+        <div className='px-6 text-black-500 space-y-2 dark:text-slate-400'>
           <ul className='list-disc'>
             {summaries.map((summary, index) => (
               <li key={index}>{summary}</li>
@@ -42,7 +42,7 @@ export const SectionCarouselItem = ({ title, header, imageSrc, bubbles, descript
         </div>
       )}
       <br />
-      {award && <p className='font-semibold'>{award}</p>}
+      {award && <p className='font-semibold dark:text-white'>{award}</p>}
       {githubUrl && (
         <div className='grid grid-cols-3 gap-1 py-3'>
           <div className='col-span-1'>

@@ -25,20 +25,20 @@ export const Overlay = () => {
         <Section opacity={introSectionOpacity} scrollText="↓ Scroll down to see what I'm up to...">
           <div className='flex spacing-x'>
             <h1 className='font-semibold font-serif text-2xl animate-waving-hand'>👋 </h1>
-            <h1 className='font-semibold font-serif text-2xl'> Hi My name is Daniel.</h1>
+            <h1 className='font-semibold font-serif text-2xl dark:text-slate-400'> Hi My name is Daniel.</h1>
           </div>
           <TypeAnimation
-            sequence={["I'm a <Frontend Engineer/>", 2000, "I'm a <Backend Engineer/>", 2000, "I'm a <Full Stack Engineer/>", 2000]}
+            sequence={["I'm a <Backend Engineer />", 2000, "I'm a <Frontend Engineer />", 2000, "I'm a <Full Stack Engineer />", 2000]}
             wrapper='h2'
             speed={10}
-            className='font-medium font-serif text-xl mt-2 mb-8'
+            className='font-medium font-serif text-xl mt-2 mb-6 dark:text-slate-400'
           />
 
-          <p className='text-gray-500'>Welcome to my three dimensional portfolio</p>
+          <p className='text-gray-500 '>Welcome to my three dimensional portfolio</p>
         </Section>
         <SectionCarousel sections={sectionData} opacity={skillSectionOpacity} />
         <Section opacity={contactSectionOpacity}>
-          <h1 className='font-semibold font-serif text-2xl'>Contact</h1>
+          <h1 className='font-semibold font-serif text-2xl dark:text-white'>Contact</h1>
         </Section>
       </div>
     </Scroll>
