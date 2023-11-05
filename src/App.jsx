@@ -5,7 +5,7 @@ import { Footer } from './components/Footer';
 import { LoadingScreen } from './components/LoadingScreen';
 import './App.css';
 
-const maxLoadTime = 15000; // 15 seconds
+const maxLoadTime = 50; // 15 seconds
 
 function App() {
   const [loading, setLoading] = useState(true);
