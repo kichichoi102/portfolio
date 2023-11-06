@@ -8,11 +8,11 @@ live site:[https://daniel-choi.vercel.app/](https://daniel-choi.vercel.app/)
 - `react-three/drei`
 - `vercel`
 
-source acknowledgments:
+## source acknowledgments:
 - [3D Model Designer](https://twitter.com/thayumiko)
 - [Icons](https://www.flaticon.com/)
 
-license:
+## license:
 Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) License
 
 This is a human-readable summary of (and not a substitute for) the license. You are free to:
