@@ -1,8 +1,31 @@
-# React + Vite
+# daniel choi developer portfolio
+live site: [https://daniel-choi.vercel.app/](https://daniel-choi.vercel.app/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## stack:
+- `vite`
+- `react`
+- `react-three/fiber`
+- `react-three/drei`
+- `vercel`
 
-Currently, two official plugins are available:
+## source acknowledgments:
+- [3D Model Designer](https://twitter.com/thayumiko)
+- [Icons](https://www.flaticon.com/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## license:
+Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) License
+
+This is a human-readable summary of (and not a substitute for) the license. You are free to:
+- Share — copy and redistribute the material in any medium or format
+- Adapt — remix, transform, and build upon the material
+The licensor cannot revoke these freedoms as long as you follow the license terms.
+
+Under the following terms:
+- Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+- NonCommercial — You may not use the material for commercial purposes.
+- No additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.
+Notices:
+
+You do not have to comply with the license for elements of the material in the public domain or where your use is permitted by an applicable exception or limitation.
+No warranties are given. The license may not give you all of the permissions necessary for your intended use. For example, other rights such as publicity, privacy, or moral rights may limit how you use the material.
+
