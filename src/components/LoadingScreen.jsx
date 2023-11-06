@@ -17,9 +17,10 @@ export const LoadingScreen = ({ progress }) => {
           <div className='w-1/2'>
             <img src={catImage} alt={'coding_cat'} className='flex items-center rounded-md border border-slate-500' />
           </div>
-          <h1 className='w-1/2 my-4 text-xl md:text-3xl font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.indigo.400),theme(colors.indigo.100),theme(colors.sky.400),theme(colors.fuchsia.400),theme(colors.sky.400),theme(colors.indigo.100),theme(colors.indigo.400))] bg-[length:200%_auto] animate-gradient'>
+          <p className='w-1/2 my-4 text-xl md:text-3xl font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.indigo.400),theme(colors.indigo.100),theme(colors.sky.400),theme(colors.fuchsia.400),theme(colors.sky.400),theme(colors.indigo.100),theme(colors.indigo.400))] bg-[length:200%_auto] animate-gradient'>
             Please be patient while my cat fetches my portfolio for you!
-          </h1>
+          </p>
+          <p className='block md:hidden text-slate-400'>Media Queries for Mobile is not supported yet 🙁</p>
           <div className='w-1/2 h-auto mt-2 bg-gray-200 rounded-full dark:bg-gray-700'>
             <div
               className='h-2.5 leading-none rounded-full bg-[linear-gradient(to_right,theme(colors.indigo.400),theme(colors.indigo.100),theme(colors.sky.400),theme(colors.fuchsia.400),theme(colors.sky.400),theme(colors.indigo.100),theme(colors.indigo.400))] bg-[length:200%_auto] animate-gradient'
