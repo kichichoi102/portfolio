@@ -4,14 +4,27 @@ import { useFrame } from '@react-three/fiber';
 import { TypeAnimation } from 'react-type-animation';
 import { useState } from 'react';
 import { SectionCarousel } from './SectionCarousel';
+import { ContactForm } from '../ContactForm';
 import { sectionData, favoriteThings } from '../../services/constants';
 
 export const Overlay = () => {
   const [introSectionOpacity, setIntroSectionOpacity] = useState(1);
   const [skillSectionOpacity, setSkillSectionOpacity] = useState(1);
   const [contactSectionOpacity, setContactSectionOpacity] = useState(1);
+  const [isNameLoaded, setIsNameLoaded] = useState(false);
+  const [isFirstSectionLoaded, setIsFirstSectionLoaded] = useState(false);
+  const firstDelay = 2200;
+  const secondDelay = 3000;
 
   const scroll = useScroll();
+
+  setTimeout(() => {
+    setIsNameLoaded(true);
+  }, firstDelay);
+
+  setTimeout(() => {
+    setIsFirstSectionLoaded(true);
+  }, secondDelay)
 
   useFrame(() => {
     setIntroSectionOpacity(1 - scroll.range(0, 1 / 3));
@@ -24,17 +37,31 @@ export const Overlay = () => {
       <div className='w-screen'>
         <Section opacity={introSectionOpacity} scrollText="↓ Scroll down to see what I'm up to...">
           <div className='flex spacing-x'>
-            <h1 className='font-semibold font-serif text-2xl animate-waving-hand'>👋&nbsp;</h1>
-            <TypeAnimation sequence={['Hi, my name is Daniel.']} wrapper='h1' speed={10} className='font-semibold font-serif text-2xl dark:text-slate-400' />
+            <h1 className='font-medium font-serif text-2xl animate-waving-hand'>👋&nbsp;</h1>
+            <TypeAnimation sequence={['Hi there, my name is']} wrapper='h1' speed={3} cursor={false} className='font-medium font-serif text-2xl dark:text-slate-400' />
+            <h1>&nbsp;</h1>
+            {isNameLoaded && <TypeAnimation sequence={['Daniel.']} wrapper='h1' speed={5} className='font-medium font-serif text-2xl bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.green.300),theme(colors.green.100),theme(colors.sky.400),theme(colors.yellow.200),theme(colors.sky.400),theme(colors.green.100),theme(colors.green.300))] bg-[length:200%_auto] animate-gradient' />}
           </div>
           <div className='flex flex-row'>
-            <h2 className='font-medium font-serif text-xl mt-2 mb-6 text-black dark:text-slate-400'>I&apos;m a&nbsp;</h2>
-            <TypeAnimation
+            <h2 className='font-medium font-serif text-xl my-2 text-black dark:text-slate-400 align-bottom'>I am a&nbsp;</h2>
+            {isFirstSectionLoaded && <TypeAnimation
               sequence={[' <Backend Engineer />', 2000, ' <Frontend Engineer />', 2000, ' <Full Stack Engineer />', 2000]}
               wrapper='h2'
               speed={10}
-              className='font-medium font-serif text-xl mt-2 mb-6 bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.indigo.400),theme(colors.indigo.100),theme(colors.sky.400),theme(colors.fuchsia.400),theme(colors.sky.400),theme(colors.indigo.100),theme(colors.indigo.400))] bg-[length:200%_auto] animate-gradient'
-            />
+              deletionSpeed={50}
+              repeat={Infinity}
+              className='font-medium font-serif text-2xl my-2 bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.indigo.400),theme(colors.indigo.100),theme(colors.sky.400),theme(colors.fuchsia.400),theme(colors.sky.400),theme(colors.indigo.100),theme(colors.indigo.400))] bg-[length:200%_auto] animate-gradient'
+            />}
+          </div>
+          <div className='flex flex-row mb-6'>
+            <h2 className='font-medium font-serif text-l text-black dark:text-slate-400'>With over&nbsp;</h2>
+            {isFirstSectionLoaded && <TypeAnimation
+              sequence={['3.5 years']}
+              wrapper='h2'
+              speed={1}
+              className='font-medium font-serif text-l bg-clip-text animate-pulse text-transparent bg-[linear-gradient(to_right,theme(colors.purple.400),theme(colors.purple.100),theme(colors.pink.300),theme(colors.orange.400),theme(colors.pink.300),theme(colors.purple.100),theme(colors.purple.400))] bg-[length:200%_auto] animate-gradient'
+            />}
+            <h2 className='font-medium font-serif text-l text-black dark:text-slate-400'>of experience</h2>
           </div>
 
           <p className='text-gray-500 '>Welcome to my three dimensional portfolio</p>
@@ -47,11 +74,7 @@ export const Overlay = () => {
         </Section>
         <SectionCarousel sections={sectionData} opacity={skillSectionOpacity} />
         <Section opacity={contactSectionOpacity}>
-          <div className='flex spacing-x'>
-            <h1 className='font-semibold font-serif text-2xl dark:text-white'>Say hello!</h1>
-            <h1 className='font-semibold font-serif text-2xl animate-waving-hand'>👋&nbsp;</h1>
-            
-          </div>
+          <ContactForm />
         </Section>
       </div>
     </Scroll>
