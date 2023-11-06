@@ -55,7 +55,7 @@ export const ContactForm = () => {
             name='message'
             onChange={handleChange}
           />
-          <div className='grid grid-cols-10 gap-4 py-2'>
+          <div className='grid grid-cols-12 gap-2 my-2 py-1'>
             <button
               className='col-span-1 flex justify-self-start rounded hover:bg-slate-400 hover:animate-pulse'
               onClick={() => {
@@ -76,6 +76,15 @@ export const ContactForm = () => {
             <button
               className='col-span-1 flex justify-self-start rounded hover:bg-slate-400 hover:animate-pulse'
               onClick={() => {
+                window.open('https://drive.google.com/file/d/1dJvKLq2LEecfsYbc7R0xkQkZuLoQ7uG-/view?usp=sharingg');
+              }}
+            >
+              <img src={'icons/resume.png'} alt={'mail'} />
+            </button>
+
+            <button
+              className='col-span-1 flex justify-self-start rounded hover:bg-slate-400 hover:animate-pulse'
+              onClick={() => {
                 window.open('https://calendly.com/kichichoi102/30min', '_blank');
               }}
             >
@@ -91,16 +100,16 @@ export const ContactForm = () => {
             </button>
 
             {submitted ? (
-              <div className='border rounded border-slate-400 text-white font-semibold bg-emerald-400 col-span-4 col-start-8 text-center'>✓ Submitted</div>
+              <div className='border rounded border-slate-400 text-white font-semibold bg-emerald-400 col-span-6 col-start-8 text-center'>✓ Submitted</div>
             ) : (
               <button
-                className='border rounded border-slate-400 text-l font-black hover:font-black hover:border-slate-200 col-span-4 col-start-8 bg-slate-400 bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.purple.400),theme(colors.purple.100),theme(colors.pink.300),theme(colors.orange.400),theme(colors.pink.300),theme(colors.purple.100),theme(colors.purple.400))] bg-[length:200%_auto] animate-gradient'
+                className='border rounded border-slate-400 text-l font-black hover:font-black hover:border-slate-200 col-span-6 col-start-8 bg-slate-400 bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.purple.400),theme(colors.purple.100),theme(colors.pink.300),theme(colors.orange.400),theme(colors.pink.300),theme(colors.purple.100),theme(colors.purple.400))] bg-[length:200%_auto] animate-gradient'
                 type='submit'
               >
                 {submitting ? (
-                  <div className='flex flex-row my-1'>
+                  <div className='flex flex-row my-1 justify-center'>
                     <img src={'icons/loading.png'} className='animate-spin h-6 w-6 ml-1 mr-1' />
-                    <p className='text-white font-semibold'>Progressing</p>
+                    <p className='font-semibold bg-slate-400 bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.purple.400),theme(colors.purple.100),theme(colors.pink.300),theme(colors.orange.400),theme(colors.pink.300),theme(colors.purple.100),theme(colors.purple.400))] bg-[length:200%_auto] animate-gradient'>Submitting...</p>
                   </div>
                 ) : (
                   'Submit'
