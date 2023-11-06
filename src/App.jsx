@@ -11,9 +11,6 @@ const maxLoadTime = 5000; // 10 seconds
 function App() {
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
-  const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-  const appStyle = isDarkMode ? 'bg-[linear-gradient(0deg,#0f2027,#203a43,#2c5364)]' : 'bg-[linear-gradient(0deg,#d9afd9_0%,#97d9e1_100%)]';
 
   useEffect(() => {
     if (loading) {
@@ -37,7 +34,7 @@ function App() {
   }, [loading]);
 
   return (
-    <div style={{ height: '100%' }} className={appStyle}>
+    <div style={{ height: '100%' }} className={'dark:bg-[linear-gradient(0deg,#0f2027,#203a43,#2c5364)] bg-[linear-gradient(0deg,#d9afd9_0%,#97d9e1_100%)]'}>
       <Canvas
         camera={{
           fov: 70,
