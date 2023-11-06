@@ -37,7 +37,7 @@ export const sectionData = {
         'My Three Dimensional portfolio to showcase my projects and experiences! I wanted to create a unique portfolio that would stand out from the rest. I also wanted to learn Three.js and how I could implement it in React!',
       award: "You're Currently here!",
       githubUrl: 'https://github.com/kichichoi102/portfolio',
-      tryUrl: '/',
+      tryUrl: 'https://daniel-choi.vercel.app/',
     },
     {
       title: 'Flight Deals Tracker',
