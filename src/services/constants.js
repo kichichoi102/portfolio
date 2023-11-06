@@ -1,5 +1,7 @@
 import { ChapterEnum } from '../components/Overlay/Chapter';
 
+export const favoriteThings = ['🧑‍💻 Coding', '🧑‍🏫 Learning new things', '📦 Delivering good products', '🐈‍⬛ Last AND most importantly, cats!'];
+
 export const sectionData = {
   [ChapterEnum.PROJECTS]: [
     {
